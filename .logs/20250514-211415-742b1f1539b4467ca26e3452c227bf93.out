@@ -1,0 +1,41 @@
+yarn run v1.22.22
+$ next build
+  ▲ Next.js 14.2.28
+  - Experiments (use with caution):
+    · outputFileTracingRoot
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Skipping linting
+   Checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/14) ...
+   Generating static pages (3/14) 
+   Generating static pages (6/14) 
+   Generating static pages (10/14) 
+ ✓ Generating static pages (14/14)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    3.44 kB         132 kB
+├ ○ /_not-found                          871 B          88.1 kB
+├ ○ /calendar                            13.7 kB         161 kB
+├ ○ /dashboard                           7.6 kB          211 kB
+├ ○ /dashboard/calendar                  3.45 kB         132 kB
+├ ○ /dashboard/notes                     4.29 kB         132 kB
+├ ○ /dashboard/profile                   4.09 kB         132 kB
+├ ○ /dashboard/settings                  6.34 kB         134 kB
+├ ○ /finances                            4.75 kB         205 kB
+├ ○ /health                              5.32 kB         206 kB
+├ ○ /notes                               7.58 kB         162 kB
+└ ○ /tasks                               5.38 kB         160 kB
++ First Load JS shared by all            87.2 kB
+  ├ chunks/275-1761cc6be42edbea.js       31.6 kB
+  ├ chunks/a0b5f63a-93474dd3ad519a8b.js  53.6 kB
+  └ other shared chunks (total)          1.93 kB
+
+
+○  (Static)  prerendered as static content
+
+Done in 28.00s.

@@ -1,0 +1,44 @@
+yarn run v1.22.22
+$ next dev
+  ▲ Next.js 14.2.28
+  - Local:        http://localhost:3000
+  - Experiments (use with caution):
+    · outputFileTracingRoot
+
+ ✓ Starting...
+ ✓ Ready in 2.3s
+ ○ Compiling / ...
+ ✓ Compiled / in 8.6s (1354 modules)
+ HEAD / 200 in 7684ms
+ ✓ Compiled in 1108ms (680 modules)
+ GET / 200 in 59ms
+ GET / 200 in 41ms
+ GET / 200 in 40ms
+ ○ Compiling /dashboard ...
+ ✓ Compiled /dashboard in 2.1s (1420 modules)
+ ○ Compiling /notes ...
+ ✓ Compiled /notes in 516ms (1440 modules)
+ ○ Compiling /calendar ...
+ ✓ Compiled /calendar in 1364ms (1452 modules)
+ ○ Compiling /finances ...
+ ✓ Compiled /finances in 1371ms (1470 modules)
+ ○ Compiling /tasks ...
+ ✓ Compiled /tasks in 768ms (1482 modules)
+ ○ Compiling /health ...
+ ✓ Compiled /health in 1515ms (1472 modules)
+ ✓ Compiled / in 308ms (755 modules)
+ ✓ Compiled in 2.1s (1434 modules)
+ ✓ Compiled in 2.5s (1481 modules)
+ ✓ Compiled in 594ms (755 modules)
+ ✓ Compiled in 777ms (755 modules)
+ ✓ Compiled in 370ms (755 modules)
+ ✓ Compiled in 732ms (755 modules)
+ ✓ Compiled in 591ms (755 modules)
+ ✓ Compiled in 1042ms (755 modules)
+ ✓ Compiled in 660ms (755 modules)
+ ✓ Compiled in 412ms (755 modules)
+ ✓ Compiled in 367ms (755 modules)
+ ✓ Compiled in 1256ms (1473 modules)
+ ✓ Compiled in 1826ms (1494 modules)
+ ✓ Compiled in 1265ms (773 modules)
+[?25h

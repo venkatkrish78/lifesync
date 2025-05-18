@@ -1,0 +1,65 @@
+ ⚠ Compiled with warnings
+
+./components/dashboard/upcoming-reminders.tsx
+Attempted import error: 'MedicalCross' is not exported from '__barrel_optimize__?names=Calendar,Car,Clock,MedicalCross,Phone,ShoppingCart!=!lucide-react' (imported as 'MedicalCross').
+
+Import trace for requested module:
+./components/dashboard/upcoming-reminders.tsx
+./app/dashboard/page.tsx
+
+ ⚠ Compiled with warnings
+
+./components/dashboard/upcoming-reminders.tsx
+Attempted import error: 'MedicalCross' is not exported from '__barrel_optimize__?names=Calendar,Car,Clock,MedicalCross,Phone,ShoppingCart!=!lucide-react' (imported as 'MedicalCross').
+
+Import trace for requested module:
+./components/dashboard/upcoming-reminders.tsx
+./app/dashboard/page.tsx
+
+
+
+===== TS errors =====
+
+[Test Mode] ./components/dashboard/health-stats.tsx:125:45
+Type error: Type '{ responsive: boolean; maintainAspectRatio: boolean; plugins: { legend: { display: boolean; }; tooltip: { mode: string; intersect: boolean; }; }; scales: { y: { beginAtZero: boolean; grid: { display: boolean; }; }; x: { ...; }; }; }' is not assignable to type '_DeepPartialObject<CoreChartOptions<"line"> & ElementChartOptions<"line"> & PluginChartOptions<"line"> & DatasetChartOptions<"line"> & ScaleChartOptions<...> & LineControllerChartOptions>'.
+  The types of 'plugins.tooltip.mode' are incompatible between these types.
+    Type 'string' is not assignable to type '"x" | "y" | "nearest" | "index" | "dataset" | "point" | undefined'.
+
+[0m [90m 123 |[39m[0m
+[0m [90m 124 |[39m       [33m<[39m[33mdiv[39m className[33m=[39m[32m"h-[150px] mt-4"[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 125 |[39m         [33m<[39m[33mChart[39m type[33m=[39m[32m"line"[39m data[33m=[39m{chartData} options[33m=[39m{chartOptions} [33m/[39m[33m>[39m[0m
+[0m [90m     |[39m                                             [31m[1m^[22m[39m[0m
+[0m [90m 126 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+[0m [90m 127 |[39m[0m
+[0m [90m 128 |[39m       [33m<[39m[33mdiv[39m className[33m=[39m[32m"bg-accent/50 p-3 rounded-md"[39m[33m>[39m[0m
+
+[Test Mode] ./components/dashboard/upcoming-reminders.tsx:4:48
+Type error: Module '"lucide-react"' has no exported member 'MedicalCross'.
+
+[0m [90m 2 |[39m[0m
+[0m [90m 3 |[39m [36mimport[39m { motion } [36mfrom[39m [32m"framer-motion"[39m[33m;[39m[0m
+[0m[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mCalendar[39m[33m,[39m [33mClock[39m[33m,[39m [33mShoppingCart[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMedicalCross[39m[33m,[39m [33mCar[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m[0m
+[0m [90m   |[39m                                                [31m[1m^[22m[39m[0m
+[0m [90m 5 |[39m [36mimport[39m { [33mBadge[39m } [36mfrom[39m [32m"@/components/ui/badge"[39m[33m;[39m[0m
+[0m [90m 6 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/components/ui/button"[39m[33m;[39m[0m
+[0m [90m 7 |[39m[0m
+
+===== TS errors =====
+
+
+Failed to compile.
+
+./components/dashboard/health-stats.tsx:125:45
+Type error: Type '{ responsive: boolean; maintainAspectRatio: boolean; plugins: { legend: { display: boolean; }; tooltip: { mode: string; intersect: boolean; }; }; scales: { y: { beginAtZero: boolean; grid: { display: boolean; }; }; x: { ...; }; }; }' is not assignable to type '_DeepPartialObject<CoreChartOptions<"line"> & ElementChartOptions<"line"> & PluginChartOptions<"line"> & DatasetChartOptions<"line"> & ScaleChartOptions<...> & LineControllerChartOptions>'.
+  The types of 'plugins.tooltip.mode' are incompatible between these types.
+    Type 'string' is not assignable to type '"x" | "y" | "nearest" | "index" | "dataset" | "point" | undefined'.
+
+[0m [90m 123 |[39m[0m
+[0m [90m 124 |[39m       [33m<[39m[33mdiv[39m className[33m=[39m[32m"h-[150px] mt-4"[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 125 |[39m         [33m<[39m[33mChart[39m type[33m=[39m[32m"line"[39m data[33m=[39m{chartData} options[33m=[39m{chartOptions} [33m/[39m[33m>[39m[0m
+[0m [90m     |[39m                                             [31m[1m^[22m[39m[0m
+[0m [90m 126 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+[0m [90m 127 |[39m[0m
+[0m [90m 128 |[39m       [33m<[39m[33mdiv[39m className[33m=[39m[32m"bg-accent/50 p-3 rounded-md"[39m[33m>[39m[0m
+Next.js build worker exited with code: 1 and signal: null
+error Command failed with exit code 1.

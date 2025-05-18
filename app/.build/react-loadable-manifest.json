@@ -1,0 +1,26 @@
+{
+  "app/finances/page.tsx -> react-chartjs-2": {
+    "id": 432,
+    "files": [
+      "static/chunks/432.0b314c464cd02542.js"
+    ]
+  },
+  "app/health/page.tsx -> react-chartjs-2": {
+    "id": 432,
+    "files": [
+      "static/chunks/432.0b314c464cd02542.js"
+    ]
+  },
+  "components/finance-widget.tsx -> react-chartjs-2": {
+    "id": 432,
+    "files": [
+      "static/chunks/432.0b314c464cd02542.js"
+    ]
+  },
+  "components/health-widget.tsx -> react-chartjs-2": {
+    "id": 432,
+    "files": [
+      "static/chunks/432.0b314c464cd02542.js"
+    ]
+  }
+}

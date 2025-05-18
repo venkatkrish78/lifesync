@@ -1,0 +1,40 @@
+
+
+===== TS errors =====
+
+[Test Mode] ./hooks/use-user-profile.ts:55:22
+Type error: Argument of type '{ name?: string | undefined; email?: string | undefined; language?: string | undefined; notifications?: boolean | undefined; theme?: string | undefined; }' is not assignable to parameter of type 'SetStateAction<UserProfile | null>'.
+  Type '{ name?: string | undefined; email?: string | undefined; language?: string | undefined; notifications?: boolean | undefined; theme?: string | undefined; }' is not assignable to type 'UserProfile'.
+    Types of property 'name' are incompatible.
+      Type 'string | undefined' is not assignable to type 'string'.
+        Type 'undefined' is not assignable to type 'string'.
+
+[0m [90m 53 |[39m       [0m
+[0m [90m 54 |[39m       [90m// Update state[39m[0m
+[0m[31m[1m>[22m[39m[90m 55 |[39m       setUserProfile(newProfile)[33m;[39m[0m
+[0m [90m    |[39m                      [31m[1m^[22m[39m[0m
+[0m [90m 56 |[39m       [0m
+[0m [90m 57 |[39m       [36mreturn[39m [36mtrue[39m[33m;[39m[0m
+[0m [90m 58 |[39m     } [36mcatch[39m (error) {[0m
+
+===== TS errors =====
+
+
+Failed to compile.
+
+./hooks/use-user-profile.ts:55:22
+Type error: Argument of type '{ name?: string | undefined; email?: string | undefined; language?: string | undefined; notifications?: boolean | undefined; theme?: string | undefined; }' is not assignable to parameter of type 'SetStateAction<UserProfile | null>'.
+  Type '{ name?: string | undefined; email?: string | undefined; language?: string | undefined; notifications?: boolean | undefined; theme?: string | undefined; }' is not assignable to type 'UserProfile'.
+    Types of property 'name' are incompatible.
+      Type 'string | undefined' is not assignable to type 'string'.
+        Type 'undefined' is not assignable to type 'string'.
+
+[0m [90m 53 |[39m       [0m
+[0m [90m 54 |[39m       [90m// Update state[39m[0m
+[0m[31m[1m>[22m[39m[90m 55 |[39m       setUserProfile(newProfile)[33m;[39m[0m
+[0m [90m    |[39m                      [31m[1m^[22m[39m[0m
+[0m [90m 56 |[39m       [0m
+[0m [90m 57 |[39m       [36mreturn[39m [36mtrue[39m[33m;[39m[0m
+[0m [90m 58 |[39m     } [36mcatch[39m (error) {[0m
+Next.js build worker exited with code: 1 and signal: null
+error Command failed with exit code 1.
