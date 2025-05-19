@@ -28,6 +28,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import TaskForm from "@/components/modals/task-form";
+import { toast } from "sonner";
 
 type Task = {
   id: string;
@@ -46,6 +48,7 @@ export default function TasksPage() {
     threshold: 0.1,
   });
 
+  const [isTaskFormOpen, setIsTaskFormOpen] = useState(false);
   const [tasks, setTasks] = useState<Task[]>([
     {
       id: "1",
@@ -189,7 +192,10 @@ export default function TasksPage() {
             <h1 className="text-3xl font-bold">Tasks</h1>
             <p className="text-muted-foreground">Manage your to-do list and stay productive</p>
           </div>
-          <Button className="flex items-center gap-2">
+          <Button 
+            className="flex items-center gap-2"
+            onClick={() => setIsTaskFormOpen(true)}
+          >
             <Plus size={16} />
             <span>New Task</span>
           </Button>
@@ -456,6 +462,20 @@ export default function TasksPage() {
           </Tabs>
         </motion.div>
       </motion.div>
+
+      {/* Task Form Modal */}
+      <TaskForm 
+        isOpen={isTaskFormOpen} 
+        onClose={() => {
+          setIsTaskFormOpen(false);
+        }}
+        onSave={(task) => {
+          console.log("New task:", task);
+          setTasks([task, ...tasks]);
+          setIsTaskFormOpen(false);
+          toast.success("New task created!");
+        }}
+      />
     </div>
   );
 }

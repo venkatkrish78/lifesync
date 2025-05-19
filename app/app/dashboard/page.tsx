@@ -25,6 +25,10 @@ import FinanceWidget from "@/components/finance-widget";
 import HealthWidget from "@/components/health-widget";
 import CalendarWidget from "@/components/calendar-widget";
 import WeatherWidget from "@/components/weather-widget";
+import TaskForm from "@/components/modals/task-form";
+import NoteForm from "@/components/modals/note-form";
+import EventForm from "@/components/modals/event-form";
+import ActivityForm from "@/components/modals/activity-form";
 
 export default function Dashboard() {
   const { userProfile } = useUserProfile();
@@ -34,6 +38,10 @@ export default function Dashboard() {
   });
 
   const [isLoading, setIsLoading] = useState(true);
+  const [isTaskFormOpen, setIsTaskFormOpen] = useState(false);
+  const [isNoteFormOpen, setIsNoteFormOpen] = useState(false);
+  const [isEventFormOpen, setIsEventFormOpen] = useState(false);
+  const [isActivityFormOpen, setIsActivityFormOpen] = useState(false);
 
   useEffect(() => {
     // Simulate loading data
@@ -53,10 +61,12 @@ export default function Dashboard() {
           case 'n':
             e.preventDefault();
             toast.info("Keyboard shortcut: New Note");
+            setIsNoteFormOpen(true);
             break;
           case 't':
             e.preventDefault();
             toast.info("Keyboard shortcut: New Task");
+            setIsTaskFormOpen(true);
             break;
           case 'f':
             e.preventDefault();
@@ -119,7 +129,7 @@ export default function Dashboard() {
               icon={<ListTodo />}
               actionIcon={<Plus />}
               actionLabel="Add Task"
-              onAction={() => toast.success("New task created!")}
+              onAction={() => setIsTaskFormOpen(true)}
             >
               <TaskList />
             </DashboardWidget>
@@ -145,7 +155,7 @@ export default function Dashboard() {
               icon={<FileText />}
               actionIcon={<Plus />}
               actionLabel="Add Note"
-              onAction={() => toast.success("New note created!")}
+              onAction={() => setIsNoteFormOpen(true)}
             >
               <NotesList />
             </DashboardWidget>
@@ -179,7 +189,7 @@ export default function Dashboard() {
               icon={<Calendar />}
               actionIcon={<Plus />}
               actionLabel="Add Event"
-              onAction={() => toast.success("New event created!")}
+              onAction={() => setIsEventFormOpen(true)}
             >
               <CalendarWidget />
             </DashboardWidget>
@@ -197,7 +207,7 @@ export default function Dashboard() {
               icon={<LineChart />}
               actionIcon={<CheckCircle2 />}
               actionLabel="Log Activity"
-              onAction={() => toast.success("Activity logged!")}
+              onAction={() => setIsActivityFormOpen(true)}
             >
               <HealthWidget />
             </DashboardWidget>
@@ -208,6 +218,56 @@ export default function Dashboard() {
           <p>Keyboard shortcuts: Ctrl/Cmd + N (New Note), Ctrl/Cmd + T (New Task), Ctrl/Cmd + F (Search)</p>
         </div>
       </div>
+
+      {/* Modal Forms */}
+      <TaskForm 
+        isOpen={isTaskFormOpen} 
+        onClose={() => {
+          setIsTaskFormOpen(false);
+          toast.success("New task created!");
+        }}
+        onSave={(task) => {
+          console.log("New task:", task);
+          setIsTaskFormOpen(false);
+          toast.success("New task created!");
+        }}
+      />
+
+      <NoteForm 
+        isOpen={isNoteFormOpen} 
+        onClose={() => {
+          setIsNoteFormOpen(false);
+        }}
+        onSave={(note) => {
+          console.log("New note:", note);
+          setIsNoteFormOpen(false);
+          toast.success("New note created!");
+        }}
+      />
+
+      <EventForm 
+        isOpen={isEventFormOpen} 
+        onClose={() => {
+          setIsEventFormOpen(false);
+        }}
+        onSave={(event) => {
+          console.log("New event:", event);
+          setIsEventFormOpen(false);
+          toast.success("New event created!");
+        }}
+      />
+
+      <ActivityForm 
+        isOpen={isActivityFormOpen} 
+        onClose={() => {
+          setIsActivityFormOpen(false);
+        }}
+        onSave={(activity) => {
+          console.log("New activity:", activity);
+          setIsActivityFormOpen(false);
+          toast.success("Activity logged!");
+        }}
+      />
     </div>
   );
 }
